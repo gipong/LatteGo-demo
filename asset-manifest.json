@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0c27e05a.chunk.css",
+    "main.js": "/static/js/main.5b15decf.chunk.js",
+    "main.js.map": "/static/js/main.5b15decf.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.609d77dd.js",
+    "runtime-main.js.map": "/static/js/runtime-main.609d77dd.js.map",
+    "static/js/2.ff9dcd22.chunk.js": "/static/js/2.ff9dcd22.chunk.js",
+    "static/js/2.ff9dcd22.chunk.js.map": "/static/js/2.ff9dcd22.chunk.js.map",
+    "static/js/3.153d9f05.chunk.js": "/static/js/3.153d9f05.chunk.js",
+    "static/js/3.153d9f05.chunk.js.map": "/static/js/3.153d9f05.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.0c27e05a.chunk.css.map": "/static/css/main.0c27e05a.chunk.css.map",
+    "static/js/2.ff9dcd22.chunk.js.LICENSE.txt": "/static/js/2.ff9dcd22.chunk.js.LICENSE.txt",
+    "static/media/floating_circle.7d560725.png": "/static/media/floating_circle.7d560725.png",
+    "static/media/logo_panel.8d921285.png": "/static/media/logo_panel.8d921285.png",
+    "static/media/index.css": "/static/media/p9.5968a77e.png",
+    "static/media/p10t1.13cc5c34.png": "/static/media/p10t1.13cc5c34.png",
+    "static/media/p11t1.a099bf0c.png": "/static/media/p11t1.a099bf0c.png",
+    "static/media/p11t3.63fa5ca5.png": "/static/media/p11t3.63fa5ca5.png",
+    "static/media/p13t1.13c6ff88.png": "/static/media/p13t1.13c6ff88.png",
+    "static/media/p14option1img.f06a6d28.png": "/static/media/p14option1img.f06a6d28.png",
+    "static/media/p14option2img.117669d2.png": "/static/media/p14option2img.117669d2.png",
+    "static/media/p14option3img.a234a0c7.png": "/static/media/p14option3img.a234a0c7.png",
+    "static/media/p15s1.2789a964.png": "/static/media/p15s1.2789a964.png",
+    "static/media/p15s2.f4e11635.png": "/static/media/p15s2.f4e11635.png",
+    "static/media/p5panel2.f86b5c4f.png": "/static/media/p5panel2.f86b5c4f.png",
+    "static/media/p8t2.84add8c0.png": "/static/media/p8t2.84add8c0.png",
+    "static/media/p9t1.bf2f8da2.png": "/static/media/p9t1.bf2f8da2.png",
+    "static/media/philips-logo.bd56c27c.png": "/static/media/philips-logo.bd56c27c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.609d77dd.js",
+    "static/js/2.ff9dcd22.chunk.js",
+    "static/css/main.0c27e05a.chunk.css",
+    "static/js/main.5b15decf.chunk.js"
+  ]
+}
