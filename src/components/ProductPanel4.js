@@ -80,11 +80,11 @@ const ProductPanel4 = () => {
             { opacity: 0, y: -30 }, 
             { opacity: 1, y: 0 }).progress(0.3);   
                 
-        for (let i = 0; i < labelList.length; i++) {
-            t1.fromTo(labelList[i].current, 
-                { opacity: 0, y: "+=30"}, 
-                { opacity: 1, y: "+=0" }).progress(0.5 + Math.random(i) * 0.5);
-        };
+        // for (let i = 0; i < labelList.length; i++) {
+        //     t1.fromTo(labelList[i].current, 
+        //         { opacity: 0, y: "+=30"}, 
+        //         { opacity: 1, y: "+=0" }).progress(0.5 + Math.random(i) * 0.5);
+        // };
     }, []);
 
     return (
@@ -93,24 +93,24 @@ const ProductPanel4 = () => {
                 <div ref={textRef} className="col-span-1 panelLeft">
                     <div className="flex flex-row items-start justify-center p6h">
                         <div className="flex flex-row justify-center p6-coffeeLeftPanel">
-                            <img id="cL1" ref={cL1} src={p6left1} alt="" className="col-span-1 ml-16 p-8" />
+                            {/* <img id="cL1" ref={cL1} src={p6left1} alt="" className="col-span-1 ml-16 p-8" />
                             <img id="cL2" ref={cL2} src={p6left2} alt="" className="col-span-1 p-8"/>
                             <img id="cL3" ref={cL3} src={p6left3} alt="" className="col-span-1 p-8 mr-24"/>
                             <img id="cL4" ref={cL4} src={p6left4} alt="" className="col-span-1 ml-16 p-8"/>
                             <img id="cL5" ref={cL5} src={p6left5} alt="" className="col-span-1 p-8"/>
-                            <img id="cL6" ref={cL6} src={p6left6} alt="" className="col-span-1 p-8"/>
+                            <img id="cL6" ref={cL6} src={p6left6} alt="" className="col-span-1 p-8"/> */}
                         </div>
                     </div>
                 </div>
                 <div className="col-span-1 panelRight">
                     <div className="flex flex-row items-start justify-center p6h">
                         <div className="flex flex-row justify-center p6-coffeeRightPanel">
-                            <img id="cR1" ref={cR1} src={p6right1} alt="" className="col-span-1 p-8" />
+                            {/* <img id="cR1" ref={cR1} src={p6right1} alt="" className="col-span-1 p-8" />
                             <img id="cR2" ref={cR2} src={p6right2} alt="" className="col-span-1 p-8"/>
                             <img id="cR3" ref={cR3} src={p6right3} alt="" className="col-span-1 p-8"/>
                             <img id="cR4" ref={cR4} src={p6right4} alt="" className="col-span-1 ml-16 p-8"/>
                             <img id="cR5" ref={cR5} src={p6right5} alt="" className="col-span-1 p-8"/>
-                            <img id="cR6" ref={cR6} src={p6right6} alt="" className="col-span-1 p-8 mr-16"/>
+                            <img id="cR6" ref={cR6} src={p6right6} alt="" className="col-span-1 p-8 mr-16"/> */}
                         </div>
                     </div>
                 </div>

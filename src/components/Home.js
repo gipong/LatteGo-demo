@@ -23,7 +23,7 @@ const Home = () => {
             scrollTrigger: {
                 trigger: ".home-section",
                 start: () => "top top",
-                end: () => "150%",
+                end: () => "300%",
                 // markers: true,
                 scrub: 1,
                 pin: true,
@@ -38,11 +38,11 @@ const Home = () => {
         });
         t1.fromTo(circleRef.current,
             { opacity: 0, y: -30 },
-            { opacity: 1, y: 0}).progress(0.5);
+            { opacity: 1, y: 0}).progress(0.2);
         
         t1.fromTo(barRef.current, 
-            { opacity: 0, y: 50 }, 
-            { opacity: 1, y: 0 }).progress(0.7);
+            { opacity: 0, y: 30 }, 
+            { opacity: 1, y: 0 }).progress(0.25);
     }, []);
 
     useEffect(() => {
@@ -67,11 +67,11 @@ const Home = () => {
                 </div>
                 <div ref={circleRef} className="col-span-1 p1panelShow">
                     <div className="flex items-center justify-center h-screen">
-                        <img src={floating_circle} alt="" className="m-auto origin-center transition duration-300 ease-in-out animate-bounce relative floating-panel"/>
+                        <img src={floating_circle} alt="" className="m-auto origin-center transition duration-300 ease-in-out relative floating-panel"/>
                     </div>
                 </div>
                 <nav ref={barRef} className="col-span-2">
-                    <div className="w-full flex flex-row items-center justify-center bg-gray-400 bg-opacity-25">
+                    <div className="homeBar w-full flex flex-row items-center justify-center bg-gray-400 bg-opacity-25">
                         <div className="p-8 px-16"><img src={p1btm1} alt="" className="m-auto bg-center"/></div>
                         <div className="p-8 px-16"><img src={p1btm2} alt="" className="m-auto" /></div>
                         <div className="p-8 px-16"><img src={p1btm3} alt="" className="m-auto" /></div>

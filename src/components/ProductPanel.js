@@ -25,7 +25,7 @@ const ProductPanel = () => {
             scrollTrigger: {
                 trigger: ".product1-section",
                 start: () => "top top",
-                end: () => "150%",
+                end: () => "225%",
                 // markers: true,
                 scrub: 1,
                 pin: true,
@@ -55,7 +55,7 @@ const ProductPanel = () => {
                 
         t1.fromTo(textRef6.current, 
             { opacity: 0 },
-            { opacity: 1 }).progress(0.7);
+            { opacity: 1 }).progress(0.5);
     }, []);
 
     return (
@@ -69,7 +69,7 @@ const ProductPanel = () => {
                             <img ref={textRef3} src={p3line} alt="" className="col-span-1 p-4"/>
                             <img ref={textRef4} src={p3t3} alt="" className="col-span-1 p-4"/>
                             <img ref={textRef5} src={p3t4} alt="" className="col-span-1 p-4"/>
-                            <img ref={textRef6} src={p3panel} alt="" className="col-span-1 p-4 mt-24"/>
+                            <img ref={textRef6} src={p3panel} alt="" className="col-span-1 p-4 mt-16"/>
                         </div>
                     </div>
                 </div>

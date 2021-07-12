@@ -31,7 +31,7 @@ const ProductPanel6 = () => {
 
         t1.fromTo(textBg.current, 
             { opacity: 0, x: "-50vw", y: "-29.5vh"},
-            { opacity: 1, x: "-40vw", y: "-29.5vh"}).progress(0.1);
+            { opacity: 1, x: "0px", y: "-29.5vh"}).progress(0.1);
 
         t1.fromTo(textRef6.current, 
             { opacity: 0, x: -20 },
@@ -49,9 +49,9 @@ const ProductPanel6 = () => {
             <div className="grid grid-row-2 w-full h-full">
                 <div className="col-span-1 panelLeft">
                     <div className="flex flex-col justify-center items-start panelLeft-text">
-                        <div className="grid grid-cols-1">
+                        {/* <div className="grid grid-cols-1">
                             <img ref={textRef6} src={p8t1} alt="" className="col-span-1 p-4"/>
-                        </div>
+                        </div> */}
                         <div className="grid grid-cols-1">
                             <img ref={textRef7} src={p8t2} alt="" className="col-span-1 pt-48 mt-96"/>
                         </div>

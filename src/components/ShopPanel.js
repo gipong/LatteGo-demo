@@ -43,12 +43,12 @@ class ShopPanel extends Component {
         return (
             <section name="shopPanel" className="shopPanel-section flex items-center justify-center w-full h-screen bg-center bg-cover">
                 <div className="grid grid-cols-3 w-full h-full">
-                    <div className="col-span-1 panelLeft">
+                    <div className="col-span-1 shopPanelLeft">
                         <div className="flex items-start justify-center h-screen">
                             <div className="grid grid-cols-1">
-                                <img src={p14t1} alt="" className="col-span-1 p-24" />
+                                <img src={p14t1} alt="" className="col-span-1 p-4 py-24 grid" />
                             </div>
-                            <div className="grid grid-cols-1 mr-8">
+                            <div className="grid mr-8">
                                 <button className=" hover:bg-yellow-500 text-white font-bold py-2 px-6 shopBtn flex flex-row justify-center items-center relative"
                                     onMouseEnter={() => this.handleOptionShown(true)}>
                                     <img src={optionList[this.state.id]} alt="" className="pl-4 pr-1" />
