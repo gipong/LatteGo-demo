@@ -62,14 +62,14 @@ const ProductPanel = () => {
         <section name="productPanel" ref={ref} className="product1-section flex items-center justify-center w-full h-screen bg-p3 bg-center bg-cover">
             <div className="grid grid-row-2 w-full h-full">
                 <div ref={textRef} className="col-span-1 panelLeft">
-                    <div className="flex items-center justify-center panelLeft-text">
+                    <div className="flex items-center justify-center h-full">
                         <div className="grid grid-cols-1">
                             <img ref={textRef1} src={p3t1} alt="" className="col-span-1 p-8" />
                             <img ref={textRef2} src={p3t2} alt="" className="col-span-1 p-4"/>
                             <img ref={textRef3} src={p3line} alt="" className="col-span-1 p-4"/>
                             <img ref={textRef4} src={p3t3} alt="" className="col-span-1 p-4"/>
                             <img ref={textRef5} src={p3t4} alt="" className="col-span-1 p-4"/>
-                            <img ref={textRef6} src={p3panel} alt="" className="col-span-1 p-4 mt-16"/>
+                            <img ref={textRef6} src={p3panel} alt="" className="col-span-1 p-4 mt-8"/>
                         </div>
                     </div>
                 </div>

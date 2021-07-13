@@ -21,7 +21,7 @@ class SpecPanel extends Component {
     render() {
         return (
             <section name="specPanel" className={`specPanel-section flex items-start justify-center w-full bg-center bg-cover ${this.state.shown ? "specTempHeight" : "h-screen"}`}>
-                <div className="flex flex-col items-start justify-start">
+                <div className={`flex flex-col items-start justify-start ${this.state.shown ? "specTempHeight" : "h-screen"}`}>
                     <div className="flex items-start">
                         <img src={p15t1} alt="" className="col-span-1 py-24" />
                     </div>

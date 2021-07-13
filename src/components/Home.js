@@ -67,7 +67,7 @@ const Home = () => {
                 </div>
                 <div ref={circleRef} className="col-span-1 p1panelShow">
                     <div className="flex items-center justify-center h-screen">
-                        <img src={floating_circle} alt="" className="m-auto origin-center transition duration-300 ease-in-out relative floating-panel"/>
+                        <img src={floating_circle} alt="" className="circleImg m-auto origin-center transition duration-300 ease-in-out relative floating-panel"/>
                     </div>
                 </div>
                 <nav ref={barRef} className="col-span-2">

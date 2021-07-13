@@ -90,7 +90,7 @@ const ProductPanel4 = () => {
     return (
         <section name="productPanel" ref={ref} className="product4-section flex items-center justify-center w-full h-screen bg-p6 bg-center bg-cover">
             <div className="grid grid-row-2 grid-cols-2 w-full h-full">
-                <div ref={textRef} className="col-span-1 panelLeft">
+                <div ref={textRef} className="col-span-1">
                     <div className="flex flex-row items-start justify-center p6h">
                         <div className="flex flex-row justify-center p6-coffeeLeftPanel">
                             {/* <img id="cL1" ref={cL1} src={p6left1} alt="" className="col-span-1 ml-16 p-8" />

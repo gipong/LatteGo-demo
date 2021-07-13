@@ -46,9 +46,9 @@ class ShopPanel extends Component {
                     <div className="col-span-1 shopPanelLeft">
                         <div className="flex items-start justify-center h-screen">
                             <div className="grid grid-cols-1">
-                                <img src={p14t1} alt="" className="col-span-1 p-4 py-24 grid" />
+                                <img src={p14t1} alt="" className="col-span-1 p-4 py-20 grid" />
                             </div>
-                            <div className="grid mr-8">
+                            <div className="grid mr-8 pt-20">
                                 <button className=" hover:bg-yellow-500 text-white font-bold py-2 px-6 shopBtn flex flex-row justify-center items-center relative"
                                     onMouseEnter={() => this.handleOptionShown(true)}>
                                     <img src={optionList[this.state.id]} alt="" className="pl-4 pr-1" />
@@ -71,7 +71,7 @@ class ShopPanel extends Component {
                                     )}
                                 </button>
                             </div>
-                            <div className="grid grid-cols-1">
+                            <div className="grid grid-cols-1 pt-20">
                                 <button className="hover:bg-yellow-500 hover:border-yellow-500 text-white font-bold py-2 px-6 shopBtn">
                                     <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8895802&str_category_code=2900500018&ctype=B&Area=DgrpCategory" target="_blank">
                                         <img src={p14btn2} alt="" />

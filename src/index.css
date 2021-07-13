@@ -41,6 +41,10 @@ section {
   height: 100%;
 }
 
+.circleImg {
+  width: 10vw;
+}
+
 .floating-panel {
   margin-left: 10vw;
   margin-bottom: calc(5vh + 123px);
@@ -61,6 +65,7 @@ section {
 
 .panelLeft {
   width: 49vw;
+  height: 100vh;
 }
 
 .shopPanelLeft {
@@ -98,6 +103,10 @@ section {
 .p6-coffeeRightPanel {
   /* height: 40vh; */
   margin-top: 5vh;
+}
+
+.p6panelImg {
+  transform: translate(calc(-50vw + 50% + 10vw), -10vh);
 }
 
 #cL1 {
@@ -215,7 +224,7 @@ section {
   border-color: white;
   border-width: thin;
   width: 250px;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 .specTempHeight {

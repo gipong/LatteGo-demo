@@ -34,9 +34,9 @@ const ProductPanel5 = () => {
         <section name="productPanel5" ref={ref} className="product5-section flex items-center justify-center w-full h-screen bg-p7 bg-center bg-cover">
             <div className="grid grid-row-2 w-full h-full">
                 <div className="col-span-1 panelLeft">
-                    <div className="flex items-center justify-center panelLeft-text">
-                        <div className="grid grid-cols-1">
-                            <img ref={textRef6} src={p7t1} alt="" className="col-span-1 p-4 mt-24"/>
+                    <div className="flex items-center justify-center h-full">
+                        <div className="flex items-center justify-center ">
+                            <img ref={textRef6} src={p7t1} alt="" className="col-span-1 p-4"/>
                         </div>
                     </div>
                 </div>
