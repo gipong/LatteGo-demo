@@ -6,9 +6,12 @@ import p1btm2 from '../images/p1btm2.png';
 import p1btm3 from '../images/p1btm3.png';
 import p1text1 from '../images/p1text1.png';
 import p1btn1 from '../images/p1btn1.png';
+import p1btn1Hover from '../images/p1btn1_hover.png';
 import p1btn2 from '../images/p1btn2.png';
+import p1btn2Hover from '../images/p1btn2_hover.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import useHover from '../hooks/useHover';
 
 const Home = () => {
     gsap.registerPlugin(ScrollTrigger);
@@ -16,6 +19,9 @@ const Home = () => {
     const textRef = useRef(null);
     const circleRef = useRef(null);
     const barRef = useRef(null);
+
+    const [p1btn1Ref, isp1btn1Hoverd] = useHover();
+    const [p1btn2Ref, isp1btn2Hoverd] = useHover();
 
     useEffect(() => {
         const element = ref.current;
@@ -45,13 +51,6 @@ const Home = () => {
             { opacity: 1, y: 0 }).progress(0.25);
     }, []);
 
-    useEffect(() => {
-        window.addEventListener("scroll", () => {
-            console.log(window.pageYOffset);
-        });
-        
-    }, []);
-
     return (
         <section name="home" ref={ref} className="home-section flex items-center justify-center w-full h-screen bg-p1 bg-center bg-cover relative">
             <img id="logo_panel" src={logo_panel} alt="" className="absolute -top-10 left-0 transform scale-75"/>
@@ -60,8 +59,10 @@ const Home = () => {
                     <div className="flex items-center justify-center textPanel">
                         <div className="grid grid-cols-2">
                             <img src={p1text1} alt="" className="col-span-2 p-8" />
-                            <img src={p1btn1} alt="" className="col-span-1 p-4"/>
-                            <img src={p1btn2} alt="" className="col-span-1 p-4"/>
+                            <a ref={p1btn1Ref} href="#shopPanel"><img src={isp1btn1Hoverd ? p1btn1Hover : p1btn1} alt="" className="col-span-1 p-4"/></a>
+                            <a ref={p1btn2Ref} href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8895802&str_category_code=2900500018&ctype=B&Area=DgrpCategory" target="_blank">
+                                <img src={isp1btn2Hoverd ? p1btn2Hover : p1btn2} alt="" className="col-span-1 p-4"/>
+                            </a>
                         </div>
                     </div>
                 </div>

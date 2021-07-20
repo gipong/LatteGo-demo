@@ -31,7 +31,7 @@ const ProductPanel5 = () => {
     }, []);
 
     return (
-        <section name="productPanel5" ref={ref} className="product5-section flex items-center justify-center w-full h-screen bg-p7 bg-center bg-cover">
+        <section name="productPanel5" ref={ref} className="product5-section flex items-center justify-center w-full h-screen bg-p7 bg-center bg-cover relative">
             <div className="grid grid-row-2 w-full h-full">
                 <div className="col-span-1 panelLeft">
                     <div className="flex items-center justify-center h-full">

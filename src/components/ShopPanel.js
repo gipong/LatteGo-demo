@@ -41,7 +41,7 @@ class ShopPanel extends Component {
 
     render() {
         return (
-            <section name="shopPanel" className="shopPanel-section flex items-center justify-center w-full h-screen bg-center bg-cover">
+            <section id="shopPanel" name="shopPanel" className="shopPanel-section flex items-center justify-center w-full h-screen bg-center bg-cover">
                 <div className="grid grid-cols-3 w-full h-full">
                     <div className="col-span-1 shopPanelLeft">
                         <div className="flex items-start justify-center h-screen">

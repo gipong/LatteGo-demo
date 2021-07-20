@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import Home_m from './components/Home_m';
 import VideoPanel from './components/VideoPanel';
 import ProductPanel from './components/ProductPanel';
 import ProductPanel2 from './components/ProductPanel2';
@@ -59,7 +60,7 @@ function App() {
             <img src={PhilipsLogo} className="preloader-logo p-8"></img>
             <h1 className="font-bold">LatteGo EP5477</h1>
         </div>
-      ) : (
+      ) : window.innerWidth > 768 ? (
         <>
           <Navbar/>
           <main className="main-section h-screen snap snap-y snap-mandatory">
@@ -71,13 +72,19 @@ function App() {
             <ProductPanel4/>
             <ProductPanel5/>
             <ProductPanel6/>
-            <ProductPanel7/>
+            {/* <ProductPanel7/> */}
             <ProductPanel8/>
             <ProductPanel9/>
             <ProductPanel10/>
             <ProductPanel11/>
             <ShopPanel/>
             <SpecPanel/>
+          </main>
+        </>
+      ) : (
+        <>
+          <main className="mbg">
+            <Home_m />
           </main>
         </>
       )}

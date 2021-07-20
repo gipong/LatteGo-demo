@@ -116,7 +116,7 @@ const ProductPanel4 = () => {
                 </div>
                 <div className="col-span-1 panelLeft">
                     <div className="flex items-center justify-center">
-                        <div className="grid grid-cols-1 p6-textPanel pt-24">
+                        <div className="grid grid-cols-1 p6-textPanel pt-8">
                             <img ref={textRef1} src={p6t1} alt="" className="col-span-1 p-8" />
                             <img ref={textRef3} src={p6line} alt="" className="col-span-1 p-4"/>
                             <img ref={textRef4} src={p6t3} alt="" className="col-span-1 p-4"/>
