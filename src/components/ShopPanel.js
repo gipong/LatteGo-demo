@@ -8,6 +8,8 @@ import p14optionIcon from '../images/p14optionIcon.png';
 import p14option1img from '../images/p14option1img.png';
 import p14option2img from '../images/p14option2img.png';
 import p14option3img from '../images/p14option3img.png';
+import p14option4 from '../images/p14option4.png';
+import p14option5 from '../images/p14option5.png';
 
 const optionList = [
     p14option1, p14option2, p14option3
@@ -66,6 +68,14 @@ class ShopPanel extends Component {
                                             <div className="hover:text-yellow-500 m-2" value="2" onClick={() => this.handleOptionImgs(2)}>
                                                 {/* <img src={p14option3} alt="" className="pl-4 pr-1" /> */}
                                                 百貨銷售店點-南區
+                                            </div>
+                                            <div className="hover:text-yellow-500 m-2" value="2" >
+                                                {/* <img src={p14option3} alt="" className="pl-4 pr-1" /> */}
+                                                <a href="https://web.elifemall.com.tw/zh/store.php" target="_blank">3C專賣店及銷售大型量販店</a>
+                                            </div>
+                                            <div className="hover:text-yellow-500 m-2" value="2" onClick={() => this.handleOptionImgs(2)}>
+                                                {/* <img src={p14option3} alt="" className="pl-4 pr-1" /> */}
+                                                <a href="https://www.store-philips.tw/v2/official/SalePageCategory/73358" target="_blank">飛利浦直購體驗店</a>
                                             </div>
                                         </div>
                                     )}
