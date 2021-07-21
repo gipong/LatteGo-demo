@@ -59,7 +59,9 @@ const Home = () => {
                     <div className="flex items-center justify-center textPanel">
                         <div className="grid grid-cols-2">
                             <img src={p1text1} alt="" className="col-span-2 p-8" />
-                            <a ref={p1btn1Ref} href="#shopPanel"><img src={isp1btn1Hoverd ? p1btn1Hover : p1btn1} alt="" className="col-span-1 p-4"/></a>
+                            <a ref={p1btn1Ref} href="#shopPanel" onClick={() => {
+                                document.querySelector('#homeNavbar').className = "flex items-center navbarW";
+                            }}><img src={isp1btn1Hoverd ? p1btn1Hover : p1btn1} alt="" className="col-span-1 p-4"/></a>
                             <a ref={p1btn2Ref} href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8895802&str_category_code=2900500018&ctype=B&Area=DgrpCategory" target="_blank">
                                 <img src={isp1btn2Hoverd ? p1btn2Hover : p1btn2} alt="" className="col-span-1 p-4"/>
                             </a>

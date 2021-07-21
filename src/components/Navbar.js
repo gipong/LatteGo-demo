@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, Events } from 'react-scroll';
+import floatingCircleImg from '../images/floatingCircle.png';
 
 const Navbar = () => {
 
     // const handleSetActive = (to) => {
     //     console.log(to);
     // }
+
+    const [isShowed, setShow] = useState(false);
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -40,9 +43,28 @@ const Navbar = () => {
     //     console.log('end', to, element);
     // });
 
+    const changeShowStatus = () => {
+        setShow(!isShowed);
+    }
+
     return ( 
+        <>
+        <div id="floatingCircle" className="fixed floatingCircle" onClick={changeShowStatus}> 
+            <img src={floatingCircleImg} alt="" />
+        </div>
+        {isShowed && <div id="floatingPopup" className="fixed floatingPopup">
+            <div className="popupTitle">
+                Title
+            </div>
+            <div className="popupText">
+                Coming soon !
+            </div>
+            <div className="popupCloseBtn" onClick={changeShowStatus}>
+                Close
+            </div>
+        </div>}
         <nav id="navbar" className="z-10 h-screen flex right-full flex-col fixed text-white justify-center items-end pr-4">
-            <Link activeClass="active-nav" to='home' 
+            <Link id="homeNavbar" activeClass="active-nav" to='home' 
                 spy={true} smooth={true} offset={0} duration={500} 
                 className="flex navbarW justify-items-end">
                 <span>HOME</span>
@@ -85,6 +107,8 @@ const Navbar = () => {
                 <svg className="w-6 h-6 transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" /></svg>
             </Link>
         </nav>
+        </>
+        
     )
 }
 

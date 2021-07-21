@@ -16,6 +16,7 @@
     "react-mapbox-gl-geocoder": "^1.1.0",
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.2",
+    "reactjs-popup": "^2.0.5",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

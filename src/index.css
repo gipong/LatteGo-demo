@@ -327,6 +327,8 @@ section {
 
 #navbar {
   left: 98vw;
+  transition: all 500ms;
+  transition-timing-function: ease-in;
 }
 
 #navbar a span {
@@ -366,4 +368,78 @@ section {
 
 .mbg {
   background-color: #122b51;
+}
+
+.carouselbar {
+  height: 10px;
+  width: 15vw;
+  bottom: 5vh;
+}
+
+.carousel {
+  width: 7.5vw;
+  height: 7.5px;
+  margin: 0.5vw;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  transition: all 500ms;
+  transition-timing-function: ease-in;
+}
+
+.carouselActive {
+  background-color: orange;
+}
+
+.floatingCircle {
+  z-index: 100;
+  right: 10vw;
+  top: 20vh;
+  transition-timing-function: ease-in;
+  transition: all 500ms;
+}
+
+.floatingCircle:hover {
+  animation-name: enlargeAni;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes enlargeAni {
+	0% {
+		transform: scale(1);
+	}
+  30% {
+    transform: scale(1.1)
+  }
+  50% {
+		transform: scale(0.9);
+	}
+  100% {
+		transform: scale(1);
+	}
+}
+
+#floatingPopup {
+  z-index: 100;
+  background: #000000de;
+  width: 25vw;
+  height: 25vh;
+  border-radius: 20px;
+  padding: 20px;
+  transform: translate(calc(50vw - 12.5vw), calc(50vh - 12.5vh));
+  box-shadow: 5px 5px 5px 1px #a9a9a938;
+  color: whitesmoke;
+  transition-timing-function: ease-in;
+  transition: all 500ms;
+}
+
+.popupCloseBtn {
+  position: relative;
+  top: 15vh;
+  left: 19vw;
+  background: orange;
+  width: fit-content;
+  padding: 3px 10px;
+  border-radius: 15px;
+  cursor: default;
 }
