@@ -44,11 +44,11 @@ const ProductPanel6 = () => {
             { opacity: 0, x: -20 },
             { opacity: 1, x: 0 }).progress(0.1);
 
+        // t1.fromTo(videoRef.current, { opacity: 0 }, { opacity: 1}).progress(0);
+
         t1.fromTo(textRef7.current, 
             { opacity: 0},
             { opacity: 1}).progress(0.25);
-
-        t1.fromTo(videoRef.current, { opacity: 0 }, { opacity: 1}).progress(0.3);
 
         t1.fromTo(textRef7.current, 
             { opacity: 1},
