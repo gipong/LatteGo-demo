@@ -3,6 +3,7 @@ import p6t1 from '../images/p6t1.png';
 import p6t2 from '../images/p6t2.png';
 import p6t3 from '../images/p6t3.png';
 import p6line from '../images/p6line.png';
+import p6m_btn1 from '../images/p6m_btn1.png';
 
 import p6left1 from '../images/p6left1.png';
 import p6left2 from '../images/p6left2.png';
@@ -22,7 +23,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const ProductPanel4 = () => {
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
     const ref = useRef(null);
     const textRef = useRef(null);
     const textRef1 = useRef(null);
@@ -51,34 +52,34 @@ const ProductPanel4 = () => {
 
     useEffect(() => {
         // const element = ref.current;
-        let t1 = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".product4-section",
-                start: () => "top top",
-                end: () => "150%",
-                // markers: true,
-                scrub: 1,
-                pin: true,
-                onEnter: () => {
-                },
-                onLeave: () => {
-                }
-            }
-        });
-        t1.fromTo(textRef3.current,
-            { opacity: 0, x: -30 },
-            { opacity: 1, x: 0}).progress(0.1);
+        // let t1 = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: ".product4-section",
+        //         start: () => "top top",
+        //         end: () => "100%",
+        //         // markers: true,
+        //         scrub: 1,
+        //         pin: true,
+        //         onEnter: () => {
+        //         },
+        //         onLeave: () => {
+        //         }
+        //     }
+        // });
+        // t1.fromTo(textRef3.current,
+        //     { opacity: 0, x: -30 },
+        //     { opacity: 1, x: 0});
         
-        t1.fromTo(textRef1.current, 
-            { opacity: 0, y: 30 }, 
-            { opacity: 1, y: 0 }).progress(0.25);
+        // t1.fromTo(textRef1.current, 
+        //     { opacity: 0, y: 30 }, 
+        //     { opacity: 1, y: 0 });
 
-        t1.fromTo(textRef4.current, 
-            { opacity: 0, y: -60 }, 
-            { opacity: 1, y: 0 })
-        .fromTo(textRef5.current, 
-            { opacity: 0, y: -30 }, 
-            { opacity: 1, y: 0 }).progress(0.3);   
+        // t1.fromTo(textRef4.current, 
+        //     { opacity: 0, y: -60 }, 
+        //     { opacity: 1, y: 0 })
+        // .fromTo(textRef5.current, 
+        //     { opacity: 0, y: -30 }, 
+        //     { opacity: 1, y: 0 });   
                 
         // for (let i = 0; i < labelList.length; i++) {
         //     t1.fromTo(labelList[i].current, 
@@ -88,8 +89,8 @@ const ProductPanel4 = () => {
     }, []);
 
     return (
-        <section name="productPanel" ref={ref} className="product4-section flex items-center justify-center w-full h-screen bg-p6 bg-center bg-cover">
-            <div className="grid grid-row-2 grid-cols-2 w-full h-full">
+        <section name="productPanel" ref={ref} className="product4-section flex items-center justify-center w-full h-screen lg:bg-p6 lg:bg-center lg:bg-cover md:bg-p6m md:bg-no-repeat relative mbg">
+            <div className="grid grid-row-2 grid-cols-2 w-full h-full md:hidden">
                 <div ref={textRef} className="col-span-1">
                     <div className="flex flex-row items-start justify-center p6h">
                         <div className="flex flex-row justify-center p6-coffeeLeftPanel">
@@ -127,6 +128,12 @@ const ProductPanel4 = () => {
                 <div className="col-span-1 panelRight">
                     <div className="flex items-center justify-center">
                     </div>
+                </div>
+            </div>
+            <div className="absolute w-full b lg:hidden"></div>
+            <div className="p6mSection w-full lg:hidden">
+                <div className="flex flex-col w-full items-center">
+                    <div className="fadeIn1sec p61"><img src={p6m_btn1} alt="" /></div>
                 </div>
             </div>
         </section>

@@ -21,6 +21,9 @@ import PhilipsLogo from "./images/philips-logo.png";
 
 function App() {
   const ref = useRef(null);
+
+  const videoRef = useRef(null);
+  
   const [preloader, setPreload] = useState(true);
   useEffect(() => {
     if (!preloader && ref) {
@@ -48,6 +51,8 @@ function App() {
         clear();
       }
   }, [timer]);
+
+
   
   if (typeof window === "undefined" || !window.document) {
       return null;
@@ -60,12 +65,12 @@ function App() {
             <img src={PhilipsLogo} className="preloader-logo p-8"></img>
             <h1 className="font-bold">LatteGo EP5477</h1>
         </div>
-      ) : window.innerWidth > 768 ? (
+      ) : window.innerWidth > 0 ? (
         <>
           <Navbar/>
-          <main className="main-section h-screen snap snap-y snap-mandatory">
-            <Home/>
-            <VideoPanel/>
+          <main className="main-section h-screen">
+            <Home />
+            <VideoPanel />
             <ProductPanel/>
             <ProductPanel2/>
             <ProductPanel3/>

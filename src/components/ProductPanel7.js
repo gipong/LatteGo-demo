@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import videoMp4 from '../videos/feature-2.33f3d082.mp4';
 
 const ProductPanel7 = () => {
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
     const ref = useRef(null);
     const textRef6 = useRef(null);
     const textRef7 = useRef(null);
@@ -16,34 +16,34 @@ const ProductPanel7 = () => {
 
     useEffect(() => {
         // const element = ref.current;
-        let t1 = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".product7-section",
-                start: () => "top top",
-                end: () => "200%",
-                // markers: true,
-                scrub: 1,
-                pin: true,
-                onEnter: () => {
-                },
-                onLeave: () => {
-                }
-            }
-        });
+        // let t1 = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: ".product7-section",
+        //         start: () => "top top",
+        //         end: () => "100%",
+        //         // markers: true,
+        //         scrub: 1,
+        //         pin: true,
+        //         onEnter: () => {
+        //         },
+        //         onLeave: () => {
+        //         }
+        //     }
+        // });
 
-        t1.fromTo(textBg.current, 
-            { opacity: 0, x: "-50vw", y: "-29.5vh"},
-            { opacity: 1, x: "0px", y: "-29.5vh"}).progress(0.1);
+        // t1.fromTo(textBg.current, 
+        //     { opacity: 0, x: "-50vw", y: "-29.5vh"},
+        //     { opacity: 1, x: "0px", y: "-29.5vh"}).progress(0.1);
 
-        t1.fromTo(textRef6.current, 
-            { opacity: 0, x: -20 },
-            { opacity: 1, x: 0 }).progress(0.2);
+        // t1.fromTo(textRef6.current, 
+        //     { opacity: 0, x: -20 },
+        //     { opacity: 1, x: 0 }).progress(0.2);
 
-        t1.fromTo(videoRef.current, { opacity: 0 }, { opacity: 1}).progress(0.6);
+        // t1.fromTo(videoRef.current, { opacity: 0 }, { opacity: 1}).progress(0.6);
 
-        t1.fromTo(textRef7.current, 
-            { opacity: 0, y: 50 },
-            { opacity: 1, y: 0 }).progress(0.5);
+        // t1.fromTo(textRef7.current, 
+        //     { opacity: 0, y: 50 },
+        //     { opacity: 1, y: 0 }).progress(0.5);
                 
     }, []);
 

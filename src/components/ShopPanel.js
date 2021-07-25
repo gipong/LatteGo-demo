@@ -43,14 +43,22 @@ class ShopPanel extends Component {
 
     render() {
         return (
-            <section id="shopPanel" name="shopPanel" className="shopPanel-section flex items-center justify-center w-full h-screen bg-center bg-cover">
+            <section id="shopPanel" name="shopPanel" className="shopPanel-section flex items-center justify-center w-full h-screen bg-center bg-cover relative">
                 <div className="grid grid-cols-3 w-full h-full">
                     <div className="col-span-1 shopPanelLeft">
-                        <div className="flex items-start justify-center h-screen">
+                        <div className="flex flex-col items-start h-screen">
                             <div className="grid grid-cols-1">
-                                <img src={p14t1} alt="" className="col-span-1 p-4 py-20 grid" />
+                                <img src={p14t1} alt="" className="col-span-1 p-4 lg:py-20 grid" />
                             </div>
-                            <div className="grid mr-8 pt-20">
+                            <div className="grid grid-cols-1">
+                                <button className="hover:bg-yellow-500 hover:border-yellow-500 text-white font-bold py-2 px-6 shopBtn">
+                                    <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8895802&str_category_code=2900500018&ctype=B&Area=DgrpCategory" target="_blank">
+                                        <img src={p14btn2} alt="" />
+                                    </a>
+                                </button>
+
+                            </div>
+                            <div className="grid mr-8">
                                 <button className=" hover:bg-yellow-500 text-white font-bold py-2 px-6 shopBtn flex flex-row justify-center items-center relative"
                                     onMouseEnter={() => this.handleOptionShown(true)}>
                                     <img src={optionList[this.state.id]} alt="" className="pl-4 pr-1" />
@@ -81,20 +89,9 @@ class ShopPanel extends Component {
                                     )}
                                 </button>
                             </div>
-                            <div className="grid grid-cols-1 pt-20">
-                                <button className="hover:bg-yellow-500 hover:border-yellow-500 text-white font-bold py-2 px-6 shopBtn">
-                                    <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8895802&str_category_code=2900500018&ctype=B&Area=DgrpCategory" target="_blank">
-                                        <img src={p14btn2} alt="" />
-                                    </a>
-                                </button>
-
-                            </div>
                         </div>
                     </div>
-                    <div className="col-span-1 panelRight">
-                        
-                    </div>
-                    <div className="col-span-2 shopPanelImg">
+                    <div className="shopPanelImg">
                         <img src={optionImgList[this.state.id]} alt="" className="pl-4 pr-1" />
                     </div>
                 </div>

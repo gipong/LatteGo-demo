@@ -4,10 +4,10 @@ const VideoPanel = () => {
     
 
     return (
-        <section name="videoPanel" className="flex w-full h-screen bg-gray-900 relative">
+        <section id="svideo" name="videoPanel" className="flex w-full h-screen bg-gray-900 relative">
             <div className="flex-1 shadow-xl videoBlock">
                 <div className="videoWrapper">
-                    <iframe title="video" src="https://www.youtube.com/embed/rCsFvbPwV40?autoplay=0&modestbranding=1&controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Fwww.saeco.philips.com.tw&widgetid=1" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <iframe title="video" src="https://www.youtube.com/embed/VCsKnKm6Ph0?autoplay=0&modestbranding=1&controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Fwww.saeco.philips.com.tw&widgetid=1" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
             </div>
             

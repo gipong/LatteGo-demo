@@ -2,11 +2,11 @@ import React, { useRef, useState, useEffect } from 'react';
 import p4t1 from '../images/p4t1.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import videoMp4 from '../videos/section2.mp4';
-import videoMp42 from '../videos/video.e05ebed6.mp4';
+import videoMp4 from '../videos/video-01.mp4';
+import videoMp42 from '../videos/video-02.mp4';
 
 const ProductPanel2 = () => {
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
     const ref = useRef(null);
     const textRef = useRef(null);
     const videoRef = useRef(null);
@@ -16,20 +16,20 @@ const ProductPanel2 = () => {
 
     useEffect(() => {
         // const element = ref.current;
-        let t1 = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".product2-section",
-                start: () => "top top",
-                end: () => "120%",
-                // markers: true,
-                scrub: 1,
-                pin: true,
-                onEnter: () => {
-                },
-                onLeave: () => {
-                }
-            }
-        });
+        // let t1 = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: ".product2-section",
+        //         start: () => "top top",
+        //         end: () => "100%",
+        //         // markers: true,
+        //         scrub: 1,
+        //         pin: true,
+        //         onEnter: () => {
+        //         },
+        //         onLeave: () => {
+        //         }
+        //     }
+        // });
         // t1.fromTo(textRef.current,
         //     { opacity: 0, x: 30 },
         //     { opacity: 1, x: 0}).progress(0.2);

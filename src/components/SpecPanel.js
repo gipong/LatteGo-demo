@@ -33,7 +33,7 @@ class SpecPanel extends Component {
                             </div>
                         )}
                     </div>
-                    <div className="flex justify-center mb-40">
+                    <div className="flex justify-center mb-40 w-full">
                         <button className="hover:bg-yellow-500 text-white font-bold py-2 px-6 shopBtn" onClick={() => this.handleOptionShown()}>
                             {!this.state.shown ? "顯示全部技術規格" : "隱藏部分技術規格"}
                         </button>
