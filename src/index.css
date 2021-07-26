@@ -292,6 +292,9 @@ section {
     position: absolute;
     top: calc(20vh + 170px);
   }
+  .shopPanel-section {
+    height: 350vh;
+  }
 }
 
 .shopPanelImg img {
@@ -314,8 +317,8 @@ section {
   border-style: solid;
   border-color: white;
   border-width: thin;
-  height: 170px;
-  margin-top: 14rem;
+  height: 200px;
+  margin-top: 250px;
   z-index: 50;
   background-color: #123566;
 }
@@ -403,6 +406,20 @@ section {
   background-color: #122b51;
 }
 
+
+
+@media (max-width: 768px) {
+  .mbgRight {
+    background-position: right;
+  }
+  #logo_panel {
+    width: 45vw;
+  }
+  .videoWrapper {
+    height: auto;
+  }
+}
+
 .carouselbar {
   height: 10px;
   width: 15vw;
@@ -427,7 +444,7 @@ section {
 .floatingCircle {
   z-index: 100;
   right: 10vw;
-  top: 70vh;
+  top: 85vh;
   transition-timing-function: ease-in;
   transition: all 500ms;
 }
@@ -488,6 +505,12 @@ section {
   z-index: 10;
 }
 
+.p3mSection img {
+  height: 15vh;
+  width: auto;
+  padding: 10px;
+}
+
 .b {
   height: 55vh;
   margin-top: 50vh;
@@ -500,11 +523,6 @@ section {
   z-index: 0;
 }
 
-.p3mSection img {
-  height: 15vh;
-  width: auto;
-  padding: 10px;
-}
 
 .p5mSection {
   z-index: 10;
@@ -515,7 +533,10 @@ section {
 }
 .p51 img {
   max-height: 65vh;
-  padding: 5vh 5vh 0vh 0vh;
+  padding: 5vh 5vh 0vh 5vh;
+}
+.p51 img:nth-child(2) {
+  padding: 2vh 5vh 0vh 5vh;
 }
 
 .p53 {
@@ -528,7 +549,7 @@ section {
 
 @media (max-width: 768px) {
   .product3-section {
-    background-position-y: -250px;
+    /* background-position-y: -250px; */
   }
 }
 
@@ -558,19 +579,17 @@ section {
 }
 
 .p6mSection {
-  height: 340px;
   position: absolute;
-  top: calc(100vh - 340px);
+  top: 50vh;
   padding: 5vh;
   background-color: #122b51;
 }
 
 .p61 {
-  height: 260px;
 }
 
 .p61 img {
-  height: 100%;
+  height: auto;
   width: auto;
 }
 
@@ -585,9 +604,17 @@ section {
 }
 
 .p7mSection {
-  height: 20vh;
-  margin-top: 80vh;
   z-index: 10;
+  top: 50vh;
+  position: absolute;
+  height: 50vh;
+}
+
+.p7mSection img {
+  width: auto;
+  padding: 10px;
+  height: 15vh;
+  margin-top: 10vh;
 }
 
 .p9mSection {
@@ -599,9 +626,20 @@ section {
 
 .p91 {
   height: 40vh;
+  padding: 0vh 5vh;
 }
 
-.p91 img {
+.p912 {
+  height: 35vh;
+  padding: 5vh;
+}
+
+.p91 > img {
+  height: 35vh;
+  padding: 5vh;
+}
+
+.p912 > img {
   height: 100%;
   padding: 5vh;
 }
@@ -624,3 +662,30 @@ section {
   height: 100%;
   padding: 5vh;
 }
+
+.mbgRight {
+  background-position: right;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(10vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+.delay1s {
+  transition-delay: 1s;
+}
+.delay2s {
+  transition-delay: 2s;
+}
+.delay5s {
+  transition-delay: 5s;
+}
+

@@ -10,6 +10,7 @@ import p5panel1 from '../images/p5panel1.png';
 import p5panel2 from '../images/p5panel2.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import FadeInSection from '../hooks/useFadeIn';
 
 const ProductPanel3 = () => {
     // gsap.registerPlugin(ScrollTrigger);
@@ -65,17 +66,23 @@ const ProductPanel3 = () => {
     }, []);
 
     return (
-        <section name="productPanel3" ref={ref} className="product3-section flex items-center justify-center w-full h-screen lg:bg-p5 md:bg-p5m lg:bg-center lg:bg-cover relative md:bg-no-repeat mbgGradient" >
+        <section name="productPanel3" ref={ref} className="product3-section flex items-center justify-center w-full h-screen lg:bg-p5 md:bg-p5m lg:bg-center lg:bg-cover relative md:bg-no-repeat md:bg-contain mbgGradient" >
             <div className="grid grid-cols-2 w-full h-full md:hidden">
                 <div ref={textRef} className="col-span-1 panelLeft">
                     <div className="flex items-center justify-center h-screen">
                         <div className="grid grid-cols-1">
-                            <img ref={textRef1} src={p5t1} alt="" className="col-span-1 p-4" />
-                            <img ref={textRef3} src={p5line} alt="" className="col-span-1 p-4"/>
-                            <img ref={textRef4} src={p5t3} alt="" className="col-span-1 p-4"/>
-                            <img ref={textRef5} src={p5t2} alt="" className="col-span-1 p-4"/>
-                            <img ref={textRefPanel1} src={p5panel1} alt="" className="col-span-1 p-4"/>
-                            <img ref={textRefPanel2} src={p5panel2} alt="" className="col-span-1 p-4"/>
+                            <FadeInSection>
+                                <img ref={textRef1} src={p5t1} alt="" className="col-span-1 p-4" />
+                                <img ref={textRef3} src={p5line} alt="" className="col-span-1 p-4"/>
+                                <img ref={textRef4} src={p5t3} alt="" className="col-span-1 p-4"/>
+                                <img ref={textRef5} src={p5t2} alt="" className="col-span-1 p-4"/>
+                            </FadeInSection>
+                            <FadeInSection delay="delay1s">
+                                <img ref={textRefPanel1} src={p5panel1} alt="" className="col-span-1 p-4"/>
+                                <img ref={textRefPanel2} src={p5panel2} alt="" className="col-span-1 p-4"/>
+                            </FadeInSection>
+                           
+                       
                         </div>
                     </div>
                 </div>
@@ -84,13 +91,17 @@ const ProductPanel3 = () => {
                 </div>
             </div>
             <div className="absolute w-full mbgGradient b1 lg:hidden"></div>
-            <div className="p5mSection h-full lg:hidden">
-                <div className="flex flex-col">
-                    <div className="p51 fadeIn1sec">
-                        <img src={p5mt1} alt="" />
-                        <img src={p5mt2} alt="" />
-                    </div>
-                    <div className="p53 fadeIn3sec"><img src={p5mt3} alt="" /></div>
+            <div className="p5mSection lg:hidden">
+                <div className="flex flex-col items-center">
+                    <FadeInSection>
+                        <div className="p51 fadeIn1sec">
+                            <img src={p5mt1} alt="" />
+                            <img src={p5mt2} alt="" />
+                        </div>
+                    </FadeInSection>
+                    <FadeInSection delay="delay1s">
+                        <div className="p53 fadeIn3sec"><img src={p5mt3} alt="" /></div>
+                    </FadeInSection>
                 </div>
             </div>
         </section>

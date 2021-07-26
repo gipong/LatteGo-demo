@@ -21,6 +21,8 @@ import p6right6 from '../images/p6right6.png';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import FadeInSection from '../hooks/useFadeIn';
+
 
 const ProductPanel4 = () => {
     // gsap.registerPlugin(ScrollTrigger);
@@ -89,7 +91,7 @@ const ProductPanel4 = () => {
     }, []);
 
     return (
-        <section name="productPanel" ref={ref} className="product4-section flex items-center justify-center w-full h-screen lg:bg-p6 lg:bg-center lg:bg-cover md:bg-p6m md:bg-no-repeat relative mbg">
+        <section name="productPanel" ref={ref} className="product4-section flex items-center justify-center w-full h-screen lg:bg-p6 lg:bg-center lg:bg-cover md:bg-p6m md:bg-no-repeat md:bg-contain relative mbg">
             <div className="grid grid-row-2 grid-cols-2 w-full h-full md:hidden">
                 <div ref={textRef} className="col-span-1">
                     <div className="flex flex-row items-start justify-center p6h">
@@ -118,10 +120,17 @@ const ProductPanel4 = () => {
                 <div className="col-span-1 panelLeft">
                     <div className="flex items-center justify-center">
                         <div className="grid grid-cols-1 p6-textPanel pt-8">
+                            
+                            <FadeInSection>
                             <img ref={textRef1} src={p6t1} alt="" className="col-span-1 p-8" />
                             <img ref={textRef3} src={p6line} alt="" className="col-span-1 p-4"/>
+                            </FadeInSection>
+                            <FadeInSection delay="delay1s">
                             <img ref={textRef4} src={p6t3} alt="" className="col-span-1 p-4"/>
                             <img ref={textRef5} src={p6t2} alt="" className="col-span-1 p-4"/>
+                            </FadeInSection>
+
+                           
                         </div>
                     </div>
                 </div>
@@ -133,7 +142,9 @@ const ProductPanel4 = () => {
             <div className="absolute w-full b lg:hidden"></div>
             <div className="p6mSection w-full lg:hidden">
                 <div className="flex flex-col w-full items-center">
-                    <div className="fadeIn1sec p61"><img src={p6m_btn1} alt="" /></div>
+                    <div className="fadeIn1sec p61">
+                        <FadeInSection><img src={p6m_btn1} alt="" /></FadeInSection>
+                    </div>
                 </div>
             </div>
         </section>

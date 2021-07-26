@@ -4,9 +4,9 @@ import floatingCircleImg from '../images/floatingCircle.png';
 
 const Navbar = () => {
 
-    // const handleSetActive = (to) => {
-    //     console.log(to);
-    // }
+    const handleSetActive = (to) => {
+        console.log(to);
+    }
 
     const [isShowed, setShow] = useState(false);
 
@@ -45,7 +45,7 @@ const Navbar = () => {
     // });
 
     const changeShowStatus = () => {
-        setShow(!isShowed);
+        // setShow(!isShowed);
     }
 
     return ( 

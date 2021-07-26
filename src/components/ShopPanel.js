@@ -4,19 +4,32 @@ import p14btn2 from '../images/p14btn2.png';
 import p14option1 from '../images/p14option1.png';
 import p14option2 from '../images/p14option2.png';
 import p14option3 from '../images/p14option3.png';
+import p14option41 from '../images/p14option41.png';
+
 import p14optionIcon from '../images/p14optionIcon.png';
 import p14option1img from '../images/p14option1img.png';
 import p14option2img from '../images/p14option2img.png';
 import p14option3img from '../images/p14option3img.png';
+import p14option4img from '../images/p14option4img.png';
 import p14option4 from '../images/p14option4.png';
 import p14option5 from '../images/p14option5.png';
 
+import shopme from '../images/shopme.png';
+import shopmm from '../images/shopmm.png';
+import shopmn from '../images/shopmn.png';
+import shopms from '../images/shopms.png';
+
+
 const optionList = [
-    p14option1, p14option2, p14option3
+    p14option1, p14option2, p14option3, p14option41
 ];
 
 const optionImgList = [
-    p14option1img, p14option2img, p14option3img
+    p14option1img, p14option2img, p14option3img, p14option4img
+];
+
+const optionImgListm = [
+    shopmn, shopmm, shopms, shopme
 ];
 
 class ShopPanel extends Component {
@@ -77,6 +90,10 @@ class ShopPanel extends Component {
                                                 {/* <img src={p14option3} alt="" className="pl-4 pr-1" /> */}
                                                 百貨銷售店點-南區
                                             </div>
+                                            <div className="hover:text-yellow-500 m-2" value="2" onClick={() => this.handleOptionImgs(3)}>
+                                                {/* <img src={p14option3} alt="" className="pl-4 pr-1" /> */}
+                                                百貨銷售店點-東區
+                                            </div>
                                             <div className="hover:text-yellow-500 m-2" value="2" >
                                                 {/* <img src={p14option3} alt="" className="pl-4 pr-1" /> */}
                                                 <a href="https://web.elifemall.com.tw/zh/store.php" target="_blank">3C專賣店及銷售大型量販店</a>
@@ -91,8 +108,11 @@ class ShopPanel extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="shopPanelImg">
+                    <div className="shopPanelImg md:hidden">
                         <img src={optionImgList[this.state.id]} alt="" className="pl-4 pr-1" />
+                    </div>
+                    <div className="shopPanelImg lg:hidden">
+                        <img src={optionImgListm[this.state.id]} alt="" className="pl-4 pr-1" />
                     </div>
                 </div>
             </section>

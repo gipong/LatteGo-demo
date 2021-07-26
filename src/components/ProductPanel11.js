@@ -5,6 +5,8 @@ import p13t2 from '../images/p13t2.png';
 import p13line from '../images/p13line.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import FadeInSection from '../hooks/useFadeIn';
+
 
 const ProductPanel11 = () => {
     // gsap.registerPlugin(ScrollTrigger);
@@ -51,9 +53,16 @@ const ProductPanel11 = () => {
                 <div ref={textRef} className="col-span-1 panelLeft">
                     <div className="flex items-center justify-center h-screen">
                         <div className="grid grid-cols-1">
-                            <img ref={textRef1} src={p13t1} alt="" className="col-span-1 p-4" />
+                        <FadeInSection>
+                        <img ref={textRef1} src={p13t1} alt="" className="col-span-1 p-4" />
                             <img ref={textRef3} src={p13line} alt="" className="col-span-1 p-4"/>
+                        </FadeInSection>
+                           
+                            <FadeInSection>
                             <img ref={textRef4} src={p13t2} alt="" className="col-span-1 p-4"/>
+
+                            </FadeInSection>
+
                         </div>
                     </div>
                 </div>
@@ -65,7 +74,7 @@ const ProductPanel11 = () => {
             <div className="p12mSection h-full lg:hidden">
                 <div className="flex flex-col">
                     <div className="p121 fadeIn1sec">
-                        <img src={p131} alt="" />
+                    <FadeInSection><img src={p131} alt="" /></FadeInSection>
                     </div>
                 </div>
             </div>

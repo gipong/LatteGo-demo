@@ -12,6 +12,8 @@ import p3line from '../images/p3line.png';
 import p3panel from '../images/p3panel.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import FadeInSection from '../hooks/useFadeIn';
+
 
 const ProductPanel = () => {
     // gsap.registerPlugin(ScrollTrigger);
@@ -69,12 +71,16 @@ const ProductPanel = () => {
                 <div ref={textRef} className="col-span-1 panelLeft">
                     <div className="flex items-center justify-center h-full">
                         <div className="grid grid-cols-1">
-                            <img ref={textRef1} src={p3t1} alt="" className="col-span-1 p-8" />
-                            <img ref={textRef2} src={p3t2} alt="" className="col-span-1 p-4"/>
-                            <img ref={textRef3} src={p3line} alt="" className="col-span-1 p-4"/>
-                            <img ref={textRef4} src={p3t3} alt="" className="col-span-1 p-4"/>
-                            <img ref={textRef5} src={p3t4} alt="" className="col-span-1 p-4"/>
-                            <img ref={textRef6} src={p3panel} alt="" className="col-span-1 p-4 mt-8"/>
+                            <FadeInSection>
+                                <img ref={textRef1} src={p3t1} alt="" className="col-span-1 p-8" />
+                                <img ref={textRef2} src={p3t2} alt="" className="col-span-1 p-4"/>
+                                <img ref={textRef3} src={p3line} alt="" className="col-span-1 p-4"/>
+                            </FadeInSection>
+                            <FadeInSection delay="delay1s">
+                                <img ref={textRef4} src={p3t3} alt="" className="col-span-1 p-4"/>
+                                <img ref={textRef5} src={p3t4} alt="" className="col-span-1 p-4"/>
+                                <img ref={textRef6} src={p3panel} alt="" className="col-span-1 p-4 mt-8"/>
+                            </FadeInSection>
                         </div>
                     </div>
                 </div>
@@ -85,11 +91,11 @@ const ProductPanel = () => {
             </div>
             <div className="absolute w-full mbgGradient b lg:hidden"></div>
             <div className="p3mSection lg:hidden">
-                <div className="flex flex-col a">
+                <FadeInSection className="flex flex-col a">
                     <div className="fadeIn1sec"><img src={p3mt1} alt="" /></div>
                     <div className="fadeIn2sec"><img src={p3mt2} alt="" /></div>
                     <div className="fadeIn3sec"><img src={p3mt3} alt="" /></div>
-                </div>
+                </FadeInSection>
             </div>
         </section>
     )

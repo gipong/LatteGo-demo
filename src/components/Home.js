@@ -13,6 +13,7 @@ import p1mBtm1 from '../images/p1mBtm1.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import useHover from '../hooks/useHover';
+import FadeInSection from '../hooks/useFadeIn';
 
 
 const Home = () => {
@@ -85,7 +86,7 @@ const Home = () => {
     
 
     return (
-        <section id="shome" name="home" ref={ref} className="home-section flex items-center justify-center w-full h-screen bg-p1 lg:bg-center lg:bg-cover relative md:bg-p1m md:bg-no-repeat mbg">
+        <section id="shome" name="home" ref={ref} className="home-section flex items-center justify-center w-full h-screen bg-p1 lg:bg-center lg:bg-cover relative md:bg-p1m md:bg-no-repeat md:bg-contain mbg mbgRight">
             <img id="logo_panel" src={logo_panel} alt="" className="fadeIn1sec absolute -top-10 left-0 transform scale-75"/>
             <div className="grid grid-row-2 w-full h-full">
                 <div ref={textRef} className="col-span-1 p1panelShow">
@@ -107,10 +108,10 @@ const Home = () => {
                     </div>
                 </div>
                 <nav ref={barRef} className="col-span-2 md:hidden">
-                    <div className="homeBar w-full flex flex-row items-center justify-center bg-gray-400 bg-opacity-25">
-                        <div className="p-8 px-16"><img src={p1btm1} alt="" className="m-auto bg-center"/></div>
-                        <div className="p-8 px-16"><img src={p1btm2} alt="" className="m-auto" /></div>
-                        <div className="p-8 px-16"><img src={p1btm3} alt="" className="m-auto" /></div>
+                    <div className="homeBar w-full flex flex-row items-center justify-center bg-gray-400 bg-opacity-25 fadeIn5sec">
+                        <div className="p-8 px-16"><FadeInSection delay="delay5s"><img src={p1btm1} alt="" className="m-auto bg-center"/></FadeInSection></div>
+                        <div className="p-8 px-16"><FadeInSection delay="delay5s"><img src={p1btm2} alt="" className="m-auto" /></FadeInSection></div>
+                        <div className="p-8 px-16"><FadeInSection delay="delay5s"><img src={p1btm3} alt="" className="m-auto" /></FadeInSection></div>
                     </div>
                 </nav>
                 <nav ref={barRefm} className="col-span-2 lg:hidden">

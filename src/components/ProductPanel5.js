@@ -4,6 +4,8 @@ import p71 from '../images/p71.png';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import FadeInSection from '../hooks/useFadeIn';
+
 
 const ProductPanel5 = () => {
     // gsap.registerPlugin(ScrollTrigger);
@@ -33,12 +35,14 @@ const ProductPanel5 = () => {
     }, []);
 
     return (
-        <section name="productPanel5" ref={ref} className="product5-section flex items-center justify-center w-full h-screen lg:bg-p7 lg:bg-center lg:bg-cover relative md:bg-no-repeat md:bg-p7m">
+        <section name="productPanel5" ref={ref} className="product5-section flex items-center justify-center w-full h-screen lg:bg-p7 lg:bg-center lg:bg-cover md:bg-contain relative md:bg-no-repeat md:bg-p7m">
             <div className="grid grid-row-2 w-full h-full md:hidden">
                 <div className="col-span-1 panelLeft">
                     <div className="flex items-center justify-center h-full">
                         <div className="flex items-center justify-center ">
-                            <img ref={textRef6} src={p7t1} alt="" className="col-span-1 p-4"/>
+                            <FadeInSection>
+                                <img ref={textRef6} src={p7t1} alt="" className="col-span-1 p-4"/>
+                            </FadeInSection>
                         </div>
                     </div>
                 </div>
@@ -47,11 +51,11 @@ const ProductPanel5 = () => {
                     </div>
                 </div>
             </div>
-            <div className="absolute w-full mbgGradient b2 lg:hidden"></div>
+            <div className="absolute w-full mbgGradient b lg:hidden"></div>
             <div className="p7mSection h-full lg:hidden">
                 <div className="flex flex-col">
                     <div className="p71 fadeIn1sec">
-                        <img src={p71} alt="" />
+                    <FadeInSection><img src={p71} alt="" /></FadeInSection>
                     </div>
                 </div>
             </div>
