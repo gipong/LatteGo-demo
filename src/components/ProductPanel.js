@@ -90,11 +90,11 @@ const ProductPanel = () => {
                 </div>
             </div>
             <div className="absolute w-full mbgGradient b lg:hidden"></div>
-            <div className="p3mSection lg:hidden">
+            <div className="p3mSection w-full lg:hidden">
                 <FadeInSection className="flex flex-col a">
-                    <div className="fadeIn1sec"><img src={p3mt1} alt="" /></div>
-                    <div className="fadeIn2sec"><img src={p3mt2} alt="" /></div>
-                    <div className="fadeIn3sec"><img src={p3mt3} alt="" /></div>
+                    <div className="fadeIn1sec mbgGradient"><img src={p3mt1} alt="" /></div>
+                    <div className="fadeIn2sec mbgGradient"><img src={p3mt2} alt="" /></div>
+                    <div className="fadeIn3sec mbgGradient"><img src={p3mt3} alt="" /></div>
                 </FadeInSection>
             </div>
         </section>

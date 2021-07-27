@@ -534,7 +534,7 @@ section {
 }
 
 .p51 {
-  height: 65vh;
+  height: 50vh;
 }
 .p51 img {
   max-height: 65vh;
@@ -545,11 +545,11 @@ section {
 }
 
 .p53 {
-  height: 35vh;
+  height: 50vh;
 }
 .p53 img {
-  height: 35vh;
-  padding: 0vh 5vh 5vh 5vh;
+  height: 40vh;
+  padding: 5vh 5vh 5vh 5vh;
 }
 
 @media (max-width: 768px) {
@@ -631,7 +631,7 @@ section {
 
 .p91 {
   height: 40vh;
-  padding: 0vh 5vh;
+  padding: 2vh 5vh;
 }
 
 .p912 {
@@ -694,3 +694,6 @@ section {
   transition-delay: 5s;
 }
 
+section.disabled {
+  scroll-snap-type: none;
+}

@@ -90,8 +90,8 @@ const ProductPanel3 = () => {
                     
                 </div>
             </div>
-            <div className="absolute w-full mbgGradient b1 lg:hidden"></div>
-            <div className="p5mSection lg:hidden">
+            <div className="absolute w-full mbgGradient lg:hidden"></div>
+            <div className="p5mSection w-full lg:hidden">
                 <div className="flex flex-col items-center">
                     <FadeInSection>
                         <div className="p51 fadeIn1sec">
@@ -100,7 +100,7 @@ const ProductPanel3 = () => {
                         </div>
                     </FadeInSection>
                     <FadeInSection delay="delay1s">
-                        <div className="p53 fadeIn3sec"><img src={p5mt3} alt="" /></div>
+                        <div className="p53 mbgGradient adeIn3sec"><img src={p5mt3} alt="" /></div>
                     </FadeInSection>
                 </div>
             </div>

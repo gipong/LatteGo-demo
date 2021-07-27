@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, Events } from 'react-scroll';
 import floatingCircleImg from '../images/floatingCircle.png';
+import { gsap, scrollTween } from 'gsap';
+
 
 const Navbar = () => {
 
@@ -46,6 +48,29 @@ const Navbar = () => {
 
     const changeShowStatus = () => {
         // setShow(!isShowed);
+        const scroller = document.querySelectorAll('section');
+        // const shopPanel = document.querySelector('#shopPanel');
+
+        // console.log(shopPanel.clientTop)
+        // const snapTo = gsap.utils.snap(9.86 * window.innerHeight);
+        scroller.forEach(s => s.classList.add('disabled'));
+
+        // console.log(snapTo)
+        const href = window.location.href.replace("#shopPanel", "");
+        window.location.assign(href + '#shopPanel');
+        // const snapVal = snapTo(scroller[0].clientTop + 100);
+        // scrollTween = gsap.to(document.querySelector('#floatingCircle')[0], {
+        //     duration: 2,
+        //     scrollTo: {
+        //       x: snapVal
+        //     },
+        //     overwrite: 'auto',
+        //     onComplete: () => scroller.forEach(s => s.classList.remove('disabled'))
+        //   })
+        // var e = new Event('keydown');
+        // e.which = e.keyCode = 32; // 32 is the keycode for the space bar
+	    // document.dispatchEvent(e);
+        scroller.forEach(s => s.classList.remove('disabled'))   
     }
 
     return ( 

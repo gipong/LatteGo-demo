@@ -74,9 +74,9 @@ const ProductPanel10 = () => {
                 </div>
             </div>
             <div className="absolute w-full mbgGradient b3 lg:hidden"></div>
-            <div className="p12mSection h-full lg:hidden">
+            <div className="p12mSection w-full h-full lg:hidden">
                 <div className="flex flex-col">
-                    <div className="p121 fadeIn1sec">
+                    <div className="p121 mbgGradient fadeIn1sec">
                     <FadeInSection><img src={p121} alt="" /></FadeInSection>
                     </div>
                 </div>
