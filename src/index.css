@@ -500,7 +500,7 @@ section {
 }
 
 .p3mSection {
-  height: 50%;
+  height: 50vh;
   margin-top: 50vh;
   z-index: 10;
 }
