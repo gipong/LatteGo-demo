@@ -86,7 +86,7 @@ const Home = () => {
     
 
     return (
-        <section id="shome" name="home" ref={ref} className="home-section flex items-center justify-center w-full lg:h-screen md:h-full h-100 bg-p1 lg:bg-center lg:bg-cover relative md:bg-p1m md:bg-no-repeat md:bg-contain mbg mbgRight">
+        <section id="shome" name="home" ref={ref} className="home-section flex items-center justify-center w-full h-screen bg-p1 lg:bg-center lg:bg-cover relative md:bg-p1m md:bg-no-repeat md:bg-contain mbg mbgRight">
             <img id="logo_panel" src={logo_panel} alt="" className="fadeIn1sec absolute -top-10 left-0 transform scale-75"/>
             <div className="grid grid-row-2 w-full h-full">
                 <div ref={textRef} className="col-span-1 p1panelShow">

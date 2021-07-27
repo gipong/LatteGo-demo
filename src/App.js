@@ -68,7 +68,7 @@ function App() {
       ) : window.innerWidth > 0 ? (
         <>
           <Navbar/>
-          <main className="main-section lg:h-screen md:h-full">
+          <main className="main-section h-screen">
             <Home />
             <VideoPanel />
             <ProductPanel/>

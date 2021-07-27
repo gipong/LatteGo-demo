@@ -20,10 +20,7 @@
   @apply animate-pulse transition ease-in-out duration-500 active;
 }
 
-body {
-  min-height: 100vh;
-  min-height: -webkit-fill-avaiable;;
-}
+html, body { height: 100% }
 
 .main-section {
   position: relative;
