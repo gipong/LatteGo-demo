@@ -48,7 +48,7 @@ const ProductPanel7 = () => {
     }, []);
 
     return (
-        <section name="productPanel7" ref={ref} className="product7-section flex items-center justify-center w-full h-screen bg-center bg-cover relative">
+        <section name="productPanel7" ref={ref} className="product7-section flex items-center justify-center w-full lg:h-screen md:h-full bg-center bg-cover relative">
             <video ref={videoRef} autoPlay muted loop className="backgroundVideo">
                 <source src={videoMp4} type="video/mp4" />
             </video>

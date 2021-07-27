@@ -85,7 +85,7 @@ const ProductPanel = () => {
                     </div>
                 </div>
                 <div className="col-span-1 panelRight">
-                    <div className="flex items-center justify-center h-screen">
+                    <div className="flex items-center justify-center lg:h-screen md:h-full">
                     </div>
                 </div>
             </div>

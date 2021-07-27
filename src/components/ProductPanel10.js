@@ -57,7 +57,7 @@ const ProductPanel10 = () => {
                     </div> */}
                 </div>
                 <div className="col-span-1 panelRight">
-                    <div className="flex items-center justify-center h-screen panelRight-text">
+                    <div className="flex items-center justify-center lg:h-screen md:h-full panelRight-text">
                         <div className="grid grid-cols-1">
                             <FadeInSection>
                             <img ref={textRef1} src={p12t1} alt="" className="col-span-1 p-4" />

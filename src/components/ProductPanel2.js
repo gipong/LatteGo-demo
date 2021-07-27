@@ -57,7 +57,7 @@ const ProductPanel2 = () => {
                     </div> */}
                 </div>
                 <div className="col-span-1 panelRight">
-                    <div className="flex items-center justify-center h-screen panelRight-text">
+                    <div className="flex items-center justify-center lg:h-screen md:h-full panelRight-text">
                         <div className="grid grid-cols-1">
                             {/* <img ref={textRef} src={p4t1} alt="" className="col-span-1 p-8" /> */}
                         </div>
