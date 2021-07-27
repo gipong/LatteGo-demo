@@ -61,14 +61,14 @@ function App() {
   return (
     <>
       {preloader ? (
-        <div id="preloader-panel" className="flex flex-col items-center justify-center h-screen w-full bg-gray-700 text-white">
+        <div id="preloader-panel" className="flex flex-col items-center justify-center h-full w-full bg-gray-700 text-white">
             <img src={PhilipsLogo} className="preloader-logo p-8"></img>
             <h1 className="font-bold">LatteGo EP5477</h1>
         </div>
       ) : window.innerWidth > 0 ? (
         <>
           <Navbar/>
-          <main className="main-section h-screen">
+          <main className="main-section lg:h-screen md:h-full">
             <Home />
             <VideoPanel />
             <ProductPanel/>
