@@ -91,7 +91,7 @@ const ProductPanel6 = () => {
         //     <img ref={textRef8} src={p9t1} alt="" className="col-span-1 pt-48 mt-72"/>
         //     {/* <img ref={textRef9} src={p9t1} alt="" className="col-span-1 pt-48 mt-72"/> */}
         // </section>
-        <section name="productPanel6" ref={ref} className="product6-section flex items-center justify-center w-full h-screen mbg bg-center bg-cover relative">
+        <section name="productPanel6" ref={ref} className="product6-section flex items-center justify-center w-full lg:h-screen md:h-full mbg bg-center bg-cover relative">
             {!isShowed && <video ref={videoRef} autoPlay muted loop className="backgroundVideo">
                     <source src={videoMp4} type="video/mp4" />
                 </video>

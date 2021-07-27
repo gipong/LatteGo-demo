@@ -64,7 +64,7 @@ const Navbar = () => {
                 Close
             </div>
         </div>}
-        <nav id="navbar" className="z-10 h-screen flex right-full flex-col fixed text-white justify-center items-end pr-4 hidden">
+        <nav id="navbar" className="z-10 lg:h-screen md:h-full flex right-full flex-col fixed text-white justify-center items-end pr-4 hidden">
             <Link id="homeNavbar" activeClass="active-nav" to='home' 
                 spy={true} smooth={true} offset={0} duration={500} 
                 className="flex navbarW justify-items-end">

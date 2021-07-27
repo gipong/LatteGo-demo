@@ -49,7 +49,7 @@ const ProductPanel10 = () => {
     }, []);
 
     return (
-        <section name="productPanel10" ref={ref} className="product10-section flex items-center justify-center w-full h-screen lg:bg-p12 md:bg-p12m lg:bg-center lg:bg-cover md:bg-no-repeat relative">
+        <section name="productPanel10" ref={ref} className="product10-section flex items-center justify-center w-full lg:h-screen md:h-full lg:bg-p12 md:bg-p12m lg:bg-center lg:bg-cover md:bg-no-repeat relative">
             <div className="grid grid-cols-2 w-full h-full md:hidden">
                 <div ref={textRef} className="col-span-1 panelLeft">
                     {/* <div className="flex items-center justify-center panelLeft-text">

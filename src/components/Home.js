@@ -86,7 +86,7 @@ const Home = () => {
     
 
     return (
-        <section id="shome" name="home" ref={ref} className="home-section flex items-center justify-center w-full h-screen bg-p1 lg:bg-center lg:bg-cover relative md:bg-p1m md:bg-no-repeat md:bg-contain mbg mbgRight">
+        <section id="shome" name="home" ref={ref} className="home-section flex items-center justify-center w-full lg:h-screen md:h-full bg-p1 lg:bg-center lg:bg-cover relative md:bg-p1m md:bg-no-repeat md:bg-contain mbg mbgRight">
             <img id="logo_panel" src={logo_panel} alt="" className="fadeIn1sec absolute -top-10 left-0 transform scale-75"/>
             <div className="grid grid-row-2 w-full h-full">
                 <div ref={textRef} className="col-span-1 p1panelShow">
@@ -103,7 +103,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div ref={circleRef} className="col-span-1 p1panelShow">
-                    <div className="flex items-center justify-center h-screen">
+                    <div className="flex items-center justify-center lg:h-screen md:h-full">
                         <img src={floating_circle} alt="" className="circleImg m-auto origin-center transition duration-300 ease-in-out relative floating-panel"/>
                     </div>
                 </div>
