@@ -20,7 +20,10 @@
   @apply animate-pulse transition ease-in-out duration-500 active;
 }
 
-html, body { height: 100% }
+.wrap {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
 
 .main-section {
   position: relative;

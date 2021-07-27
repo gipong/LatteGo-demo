@@ -27,7 +27,7 @@
     <title>LatteGo EP5477</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root" className="wrap"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,4 +39,15 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    function safariHacks() {
+        let windowsVH = window.innerHeight / 100;
+        document.querySelector('.wrap').style.setProperty('--vh', windowsVH + 'px');
+        window.addEventListener('resize', function() {
+            document.querySelector('.wrap').style.setProperty('--vh', windowsVH + 'px');
+        });
+    }
+
+    safariHacks();
+  </script>
 </html>
