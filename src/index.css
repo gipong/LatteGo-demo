@@ -513,7 +513,7 @@ section {
 .p3mSection img {
   height: 15vh;
   width: auto;
-  padding: 10px;
+  padding: 15px;
 }
 
 .b {
@@ -549,7 +549,7 @@ section {
 }
 .p53 img {
   height: 35vh;
-  padding: 0vh 5vh 5vh 0vh;
+  padding: 0vh 5vh 5vh 5vh;
 }
 
 @media (max-width: 768px) {

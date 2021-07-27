@@ -10,30 +10,30 @@ const Navbar = () => {
 
     const [isShowed, setShow] = useState(false);
 
-    useEffect(() => {
-        window.addEventListener("scroll", (e) => {
-            console.log(e);
-            console.log(window.pageYOffset, window.innerHeight, window.pageYOffset/window.innerHeight);
-            // if (window.innerHeight * (5) < window.pageYOffset && window.pageYOffset < window.innerHeight * 10.45) {
-            //     document.querySelector("#nav1label").className = "flex items-center navbarW active-nav";
-            // } else {
-            //     document.querySelector("#nav1label").className = "flex items-center navbarW";
-            // }
+    // useEffect(() => {
+    //     window.addEventListener("scroll", (e) => {
+    //         console.log(e);
+    //         console.log(window.pageYOffset, window.innerHeight, window.pageYOffset/window.innerHeight);
+    //         if (window.innerHeight * (5) < window.pageYOffset && window.pageYOffset < window.innerHeight * 10.45) {
+    //             document.querySelector("#nav1label").className = "flex items-center navbarW active-nav";
+    //         } else {
+    //             document.querySelector("#nav1label").className = "flex items-center navbarW";
+    //         }
  
-            // if (window.innerHeight * (10.45) < window.pageYOffset && window.pageYOffset < window.innerHeight * 15.95) {
-            //     document.querySelector("#nav2label").className = "flex items-center navbarW active-nav";
-            // } else {
-            //     document.querySelector("#nav2label").className = "flex items-center navbarW";
-            // }
+    //         if (window.innerHeight * (10.45) < window.pageYOffset && window.pageYOffset < window.innerHeight * 15.95) {
+    //             document.querySelector("#nav2label").className = "flex items-center navbarW active-nav";
+    //         } else {
+    //             document.querySelector("#nav2label").className = "flex items-center navbarW";
+    //         }
 
-            // if (window.innerHeight * (15.95) <= window.pageYOffset && window.pageYOffset < window.innerHeight * 33.45) {
-            //     document.querySelector("#nav3label").className = "flex items-center navbarW active-nav";
-            // } else {
-            //     document.querySelector("#nav3label").className = "flex items-center navbarW";
-            // }
-        });
+    //         if (window.innerHeight * (15.95) <= window.pageYOffset && window.pageYOffset < window.innerHeight * 33.45) {
+    //             document.querySelector("#nav3label").className = "flex items-center navbarW active-nav";
+    //         } else {
+    //             document.querySelector("#nav3label").className = "flex items-center navbarW";
+    //         }
+    //     });
         
-    }, []);
+    // }, []);
 
     // Events.scrollEvent.register('scroll', function(to, element) {
     //     console.log('begin', to, element);
