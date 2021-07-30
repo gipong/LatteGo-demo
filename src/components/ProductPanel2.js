@@ -37,17 +37,18 @@ const ProductPanel2 = () => {
     }, []);
 
     const changeShowStatus = () => {
+        console.log('trigger change show status')
         setShow(!isShowed);
     }
 
     return (
         <section name="productPanel2" ref={ref} className="product2-section flex items-center justify-center w-full lg:h-screen md:h-full mbg bg-center bg-cover relative">
-            {!isShowed && <video ref={videoRef} autoPlay muted loop className="backgroundVideo">
-                    <source src={videoMp4} type="video/mp4" />
+            {!isShowed && <video ref={videoRef} autoPlay muted className="backgroundVideo" onEnded={changeShowStatus}>
+                    <source src={videoMp42} type="video/mp4" />
                 </video>
             }
-            {isShowed && <video ref={videoRef2} autoPlay muted loop className="backgroundVideo">
-                    <source src={videoMp42} type="video/mp4" />
+            {isShowed && <video ref={videoRef2} autoPlay muted className="backgroundVideo" onEnded={changeShowStatus}>
+                    <source src={videoMp4} type="video/mp4" />
                 </video>
             }
             <div className="grid grid-cols-2 w-full h-full">

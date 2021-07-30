@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "export GENERATE_SOURCEMAP=false && craco build",
     "test": "craco test",
     "eject": "craco eject",
     "deploy": "gh-pages -d build"

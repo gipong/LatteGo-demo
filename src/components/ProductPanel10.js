@@ -48,6 +48,18 @@ const ProductPanel10 = () => {
     
     }, []);
 
+    let style1 = {};
+    let style2 = {};
+    let style3 = {};
+    let style4 = {};
+    if (window.innerWidth < 768) {
+        style1 = {height: (window.innerWidth/768)*515*2, transform: 'translateY(50%)'};
+        style2 = {transform: `translateY(-${(window.innerWidth/768)*510}px)`};
+        style3 = {height: (window.innerWidth/768)*515*2};
+        style4 = {height: (window.innerWidth/768)*515*0.7, padding: '45px'};
+    }
+
+
     return (
         <section name="productPanel10" ref={ref} className="product10-section flex items-center justify-center w-full lg:h-screen md:h-full lg:bg-p12 md:bg-p12m lg:bg-center lg:bg-cover md:bg-no-repeat relative">
             <div className="grid grid-cols-2 w-full h-full md:hidden">
@@ -74,12 +86,10 @@ const ProductPanel10 = () => {
                 </div>
             </div>
             <div className="absolute w-full mbgGradient b3 lg:hidden"></div>
-            <div className="p12mSection w-full h-full lg:hidden">
-                <div className="flex flex-col">
-                    <div className="p121 mbgGradient fadeIn1sec">
-                    <FadeInSection><img src={p121} alt="" /></FadeInSection>
-                    </div>
-                </div>
+            <div className="p991mSection mbgGradient w-full lg:hidden" style={style1}>
+                <FadeInSection className="flex flex-col a">
+                    <img src={p121} alt="" style={style4}/>
+                </FadeInSection>
             </div>
         </section>
     )

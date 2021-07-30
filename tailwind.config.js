@@ -9,7 +9,7 @@ module.exports = {
         'p3': "url('images/p3.png')",
         'p3m': "url('images/p3m.png')",
         'p4': "url('images/p4.png')",
-        'p5m': "url('images/p4mb.png')",
+        'p5m': "url('images/p5m.png')",
         'p5': "url('images/p5.png')",
         'p6': "url('images/p6.png')",
         'p6m': "url('images/p6m.png')",

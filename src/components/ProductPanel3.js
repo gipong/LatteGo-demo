@@ -8,6 +8,9 @@ import p5mt3 from '../images/p5m_btn3.png';
 import p5line from '../images/p5line.png';
 import p5panel1 from '../images/p5panel1.png';
 import p5panel2 from '../images/p5panel2.png';
+import p3p1 from '../images/p3p1.png';
+import p3p2 from '../images/p3p2.png';
+
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import FadeInSection from '../hooks/useFadeIn';
@@ -65,6 +68,17 @@ const ProductPanel3 = () => {
     
     }, []);
 
+    let style1 = {};
+    let style2 = {};
+    let style3 = {};
+    let style4 = {};
+    if (window.innerWidth < 768) {
+        style1 = {height: (window.innerWidth/768)*848*2, transform: 'translateY(50%)'};
+        style2 = {transform: `translateY(-${(window.innerWidth/768)*848}px)`};
+        style3 = {height: (window.innerWidth/768)*573*2};
+        style4 = {height: window.innerHeight*0.3};
+    }
+
     return (
         <section name="productPanel3" ref={ref} className="product3-section flex items-center justify-center w-full lg:h-screen md:h-full lg:bg-p5 md:bg-p5m lg:bg-center lg:bg-cover relative md:bg-no-repeat md:bg-contain mbgGradient" >
             <div className="grid grid-cols-2 w-full h-full md:hidden">
@@ -72,14 +86,14 @@ const ProductPanel3 = () => {
                     <div className="flex items-center justify-center lg:h-screen md:h-full">
                         <div className="grid grid-cols-1">
                             <FadeInSection>
-                                <img ref={textRef1} src={p5t1} alt="" className="col-span-1 p-4" />
-                                <img ref={textRef3} src={p5line} alt="" className="col-span-1 p-4"/>
-                                <img ref={textRef4} src={p5t3} alt="" className="col-span-1 p-4"/>
-                                <img ref={textRef5} src={p5t2} alt="" className="col-span-1 p-4"/>
+                                <img ref={textRef1} src={p3p1} alt="" className="col-span-1 p-4"  style={style1}/>
+                                {/* <img ref={textRef3} src={p5line} alt="" className="col-span-1 p-2" />
+                                <img ref={textRef4} src={p5t3} alt="" className="col-span-1 p-2" style={{height: window.innerHeight*0.07}}/>
+                                <img ref={textRef5} src={p5t2} alt="" className="col-span-1 p-2" style={{height: window.innerHeight*0.1}}/> */}
                             </FadeInSection>
                             <FadeInSection delay="delay1s">
-                                <img ref={textRefPanel1} src={p5panel1} alt="" className="col-span-1 p-4"/>
-                                <img ref={textRefPanel2} src={p5panel2} alt="" className="col-span-1 p-4"/>
+                                <img ref={textRefPanel1} src={p3p2} alt="" className="col-span-1 p-4" style={style1}/>
+                                {/* <img ref={textRefPanel2} src={p5panel2} alt="" className="col-span-1" style={{height: window.innerHeight*0.25}}/> */}
                             </FadeInSection>
                            
                        
@@ -90,20 +104,22 @@ const ProductPanel3 = () => {
                     
                 </div>
             </div>
-            <div className="absolute w-full mbgGradient lg:hidden"></div>
-            <div className="p5mSection w-full lg:hidden">
+            <div className="absolute w-full mbgGradient lg:hidden md:hidden"></div>
+            <div className="lg:hidden" style={{zIndex: 50}}>
+                <div className="p53 mbgGradient w-full adeIn3sec absolute" style={style3}><img src={p5mt3} alt="" /></div>
+            </div>
+           
+            <div className="p5mSection mbgGradient w-full lg:hidden" style={style1}>
                 <div className="flex flex-col items-center">
                     <FadeInSection>
-                        <div className="p51 fadeIn1sec">
+                        <div className="p51 fadeIn1sec" style={style2}>
                             <img src={p5mt1} alt="" />
                             <img src={p5mt2} alt="" />
                         </div>
                     </FadeInSection>
-                    <FadeInSection delay="delay1s">
-                        <div className="p53 mbgGradient adeIn3sec"><img src={p5mt3} alt="" /></div>
-                    </FadeInSection>
                 </div>
             </div>
+            
         </section>
     )
 }

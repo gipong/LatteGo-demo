@@ -51,7 +51,7 @@ const ProductPanel5 = () => {
                     </div>
                 </div>
             </div>
-            <div className="absolute w-full mbgGradient b lg:hidden"></div>
+            <div className="absolute w-full mbgGradient b lg:hidden md:hidden"></div>
             <div className="p7mSection h-full lg:hidden">
                 <div className="flex flex-col">
                     <div className="p71 fadeIn1sec">

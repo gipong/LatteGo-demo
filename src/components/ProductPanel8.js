@@ -52,8 +52,19 @@ const ProductPanel8 = () => {
     
     // }, []);
 
+    let style1 = {};
+    let style2 = {};
+    let style3 = {};
+    let style4 = {};
+    if (window.innerWidth < 768) {
+        style1 = {height: (window.innerWidth/768)*515*2, transform: 'translateY(50%)'};
+        style2 = {transform: `translateY(-${(window.innerWidth/768)*510}px)`};
+        style3 = {height: (window.innerWidth/768)*515*2};
+        style4 = {height: (window.innerWidth/768)*515*0.8, marginTop: '10px'};
+    }
+
     return (
-        <section name="productPanel8" ref={ref} className="product8-section flex items-center justify-center w-full lg:h-screen md:h-full lg:bg-p10 md:bg-p9m lg:bg-center lg:bg-cover md:bg-no-repeat mbg relative">
+        <section name="productPanel8" ref={ref} style={style3} className="product8-section flex items-center justify-center w-full lg:h-screen md:h-full lg:bg-p10 md:bg-p9m lg:bg-center lg:bg-cover md:bg-no-repeat lg:mbg relative">
             <div className="grid grid-cols-2 w-full h-full md:hidden">
                 <div ref={textRef} className="col-span-1 panelLeft">
                     {/* <div className="flex items-center justify-center panelLeft-text">
@@ -78,13 +89,11 @@ const ProductPanel8 = () => {
                     </div>
                 </div>
             </div>
-            <div className="absolute w-full mbg b1 lg:hidden"></div>
-            <div className="p9mSection w-full h-full lg:hidden">
-                <div className="flex flex-col">
-                    <div className="p91 mbg fadeIn1sec">
-                        <FadeInSection><img src={p9m1} alt="" /></FadeInSection>
-                    </div>
-                </div>
+            <div className="absolute w-full mbg b1 lg:hidden md:hidden"></div>
+            <div className="p99mSection mbg w-full lg:hidden" style={style1}>
+                <FadeInSection className="flex flex-col a">
+                    <img src={p9m1} style={style4} alt="" />
+                </FadeInSection>
             </div>
         </section>
     )

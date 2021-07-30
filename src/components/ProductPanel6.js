@@ -77,6 +77,17 @@ const ProductPanel6 = () => {
                 
     }, []);
 
+    let style1 = {height: '100%'}
+    let style2 = {};
+    let style3 = {};
+    let style4 = {};
+    if (window.innerWidth < 768) {
+        style1 = {width: '100%'};
+        style2 = {width: '100%'};
+        style3 = {height: window.innerHeight*0.15};
+        style4 = {height: window.innerHeight*0.3};
+    }
+
     return (
         // <section name="productPanel6" ref={ref} className="product6-section flex items-center justify-center w-full h-screen bg-center bg-cover relative mbg">
         //     <video ref={videoRef} autoPlay muted loop className="backgroundVideo">
@@ -92,11 +103,11 @@ const ProductPanel6 = () => {
         //     {/* <img ref={textRef9} src={p9t1} alt="" className="col-span-1 pt-48 mt-72"/> */}
         // </section>
         <section name="productPanel6" ref={ref} className="product6-section flex items-center justify-center w-full lg:h-screen md:h-full mbg bg-center bg-cover relative">
-            {!isShowed && <video ref={videoRef} autoPlay muted loop className="backgroundVideo">
+            {!isShowed && <video ref={videoRef} autoPlay muted className="backgroundVideo" style={style1} onEnded={changeShowStatus}>
                     <source src={videoMp4} type="video/mp4" />
                 </video>
             }
-            {isShowed && <video ref={videoRef2} autoPlay muted loop className="backgroundVideo">
+            {isShowed && <video ref={videoRef2} autoPlay muted className="backgroundVideo"  style={style1} onEnded={changeShowStatus}>
                     <source src={videoMp42} type="video/mp4" />
                 </video>
             }

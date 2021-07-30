@@ -149,6 +149,11 @@ section {
   .p1panelShow {
     height: calc(100vh - 240px);
   }
+  .circleImg {
+    width: 15vw;
+    top: 25vh;
+    right: -40vw;
+  }
 }
 
 .panelLeft {
@@ -448,8 +453,8 @@ section {
 
 .floatingCircle {
   z-index: 100;
-  right: 10vw;
-  top: 85vh;
+  right: 5vw;
+  top: 50vh;
   transition-timing-function: ease-in;
   transition: all 500ms;
 }
@@ -505,8 +510,8 @@ section {
 }
 
 .p3mSection {
-  height: 50vh;
-  margin-top: 50vh;
+  /* height: 50vh;
+  margin-top: 50vh; */
   z-index: 10;
 }
 
@@ -623,10 +628,24 @@ section {
 }
 
 .p9mSection {
-  height: 40vh;
-  margin-top: 60vh;
+  /* height: 40vh;
+  margin-top: 60vh; */
   z-index: 10;
   background-color: #122b51;
+}
+
+.p99mSection img{
+  height: 40vh;
+  width: auto;
+  padding: 15px;
+  margin: auto;
+}
+
+.p991mSection img{
+  height: 27vh;
+  width: auto;
+  padding: 15px;
+  margin: auto;
 }
 
 .p91 {

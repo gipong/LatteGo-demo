@@ -5,6 +5,9 @@ import p6t3 from '../images/p6t3.png';
 import p6line from '../images/p6line.png';
 import p6m_btn1 from '../images/p6m_btn1.png';
 
+import p4p1 from '../images/p4p1.png';
+import p4p2 from '../images/p4p2.png';
+
 import p6left1 from '../images/p6left1.png';
 import p6left2 from '../images/p6left2.png';
 import p6left3 from '../images/p6left3.png';
@@ -90,6 +93,17 @@ const ProductPanel4 = () => {
         // };
     }, []);
 
+    let style1 = {};
+    let style2 = {};
+    let style3 = {};
+    let style4 = {};
+    if (window.innerWidth < 768) {
+        style1 = {height: window.innerHeight*0.3};
+        style2 = {height: window.innerHeight*0.2};
+        style3 = {height: window.innerHeight*0.15};
+        style4 = {height: window.innerHeight*0.3};
+    }
+
     return (
         <section name="productPanel" ref={ref} className="product4-section flex items-center justify-center w-full lg:h-screen md:h-full lg:bg-p6 lg:bg-center lg:bg-cover md:bg-p6m md:bg-no-repeat md:bg-contain relative mbg">
             <div className="grid grid-row-2 grid-cols-2 w-full h-full md:hidden">
@@ -122,12 +136,12 @@ const ProductPanel4 = () => {
                         <div className="grid grid-cols-1 p6-textPanel pt-8">
                             
                             <FadeInSection>
-                            <img ref={textRef1} src={p6t1} alt="" className="col-span-1 p-8" />
-                            <img ref={textRef3} src={p6line} alt="" className="col-span-1 p-4"/>
+                            <img ref={textRef1} src={p4p1} alt="" className="col-span-1 p-4"  style={style1}/>
+                            {/* <img ref={textRef3} src={p6line} alt="" className="col-span-1 p-4"/> */}
                             </FadeInSection>
                             <FadeInSection delay="delay1s">
-                            <img ref={textRef4} src={p6t3} alt="" className="col-span-1 p-4"/>
-                            <img ref={textRef5} src={p6t2} alt="" className="col-span-1 p-4"/>
+                            <img ref={textRef4} src={p4p2} alt="" className="col-span-1 p-4" style={style2}/>
+                            {/* <img ref={textRef5} src={p6t2} alt="" className="col-span-1 p-4"/> */}
                             </FadeInSection>
 
                            

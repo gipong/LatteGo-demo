@@ -38,10 +38,12 @@ class ShopPanel extends Component {
         super(props);
         this.handleOptionImgs = this.handleOptionImgs.bind(this);
         this.handleOptionShown = this.handleOptionShown.bind(this);
+        this.timer = null;
         
         this.state = {
             id: 0,
-            shown: false
+            shown: false,
+            timer: null
         }
     }    
 
@@ -51,7 +53,10 @@ class ShopPanel extends Component {
     }
 
     handleOptionShown(status) {
-        this.setState({shown: status})
+        this.setState({shown: status});
+        this.state.timer = setTimeout(() => {
+            this.setState({shown: false});
+        }, 3000);
     }
 
     render() {
@@ -64,7 +69,7 @@ class ShopPanel extends Component {
                                 <img src={p14t1} alt="" className="col-span-1 p-4 lg:py-20 grid" />
                             </div>
                             <div className="grid grid-cols-1">
-                                <button className="hover:bg-yellow-500 hover:border-yellow-500 text-white font-bold py-2 px-6 shopBtn">
+                                <button className="hover:bg-pink-900 hover:border-pink-900 text-white font-bold py-2 px-6 shopBtn">
                                     <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8895802&str_category_code=2900500018&ctype=B&Area=DgrpCategory" target="_blank">
                                         <img src={p14btn2} alt="" />
                                     </a>
@@ -72,33 +77,33 @@ class ShopPanel extends Component {
 
                             </div>
                             <div className="grid mr-8">
-                                <button className=" hover:bg-yellow-500 text-white font-bold py-2 px-6 shopBtn flex flex-row justify-center items-center relative"
+                                <button className=" hover:bg-pink-900 text-white font-bold py-2 px-6 shopBtn flex flex-row justify-center items-center relative"
                                     onMouseEnter={() => this.handleOptionShown(true)}>
                                     <img src={optionList[this.state.id]} alt="" className="pl-4 pr-1" />
                                     <img src={p14optionIcon} alt="" className="pr-4 pl-1 shopPanelOptionIcon" />
                                     {this.state.shown && (
                                         <div className="absolute rouned ut-2 shopPanelOptions w-full">
-                                            <div className="hover:text-yellow-500 m-2" value="0" onClick={() => this.handleOptionImgs(0)}>
+                                            <div className="hover:text-pink-900 m-2" value="0" onClick={() => this.handleOptionImgs(0)}>
                                                 {/* <img src={p14option1} alt="" className="pl-4 pr-1" /> */}
                                                 百貨銷售店點-北區
                                             </div>
-                                            <div className="hover:text-yellow-500 m-2" value="1" onClick={() => this.handleOptionImgs(1)}>
+                                            <div className="hover:text-pink-900 m-2" value="1" onClick={() => this.handleOptionImgs(1)}>
                                                 {/* <img src={p14option2} alt="" className="pl-4 pr-1" /> */}
                                                 百貨銷售店點-中區
                                             </div>
-                                            <div className="hover:text-yellow-500 m-2" value="2" onClick={() => this.handleOptionImgs(2)}>
+                                            <div className="hover:text-pink-900 m-2" value="2" onClick={() => this.handleOptionImgs(2)}>
                                                 {/* <img src={p14option3} alt="" className="pl-4 pr-1" /> */}
                                                 百貨銷售店點-南區
                                             </div>
-                                            <div className="hover:text-yellow-500 m-2" value="2" onClick={() => this.handleOptionImgs(3)}>
+                                            <div className="hover:text-pink-900 m-2" value="2" onClick={() => this.handleOptionImgs(3)}>
                                                 {/* <img src={p14option3} alt="" className="pl-4 pr-1" /> */}
                                                 百貨銷售店點-東區
                                             </div>
-                                            <div className="hover:text-yellow-500 m-2" value="2" >
+                                            <div className="hover:text-pink-900 m-2" value="2" >
                                                 {/* <img src={p14option3} alt="" className="pl-4 pr-1" /> */}
-                                                <a href="https://web.elifemall.com.tw/zh/store.php" target="_blank">3C專賣店及銷售大型量販店</a>
+                                                <a href="https://www.philips-da.com.tw/products/%E5%85%A8%E8%87%AA%E5%8B%95%E7%BE%A9%E5%BC%8F%E5%92%96%E5%95%A1%E6%A9%9F-ep544794-20210619200747?utm_source=google&utm_medium=cpc&utm_campaign=adhub_ps_coffee_jul-28-2021" target="_blank">全國電子</a>
                                             </div>
-                                            <div className="hover:text-yellow-500 m-2" value="2" onClick={() => this.handleOptionImgs(2)}>
+                                            <div className="hover:text-pink-900 m-2" value="2" onClick={() => this.handleOptionImgs(2)}>
                                                 {/* <img src={p14option3} alt="" className="pl-4 pr-1" /> */}
                                                 <a href="https://www.store-philips.tw/v2/official/SalePageCategory/73358" target="_blank">飛利浦直購體驗店</a>
                                             </div>
